@@ -1,0 +1,37 @@
+{
+  "name": "devconnector",
+  "version": "1.0.0",
+  "description": "Social Network for Software Developers.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alljones/devconnector.git"
+  },
+  "keywords": [
+    "social",
+    "developers",
+    "networking"
+  ],
+  "author": "Allan Jones",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alljones/devconnector/issues"
+  },
+  "homepage": "https://github.com/alljones/devconnector#readme",
+  "devDependencies": {
+    "nodemon": "^1.17.3"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.2.1",
+    "mongoose": "^5.0.14",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "validator": "^9.4.1"
+  }
+}
