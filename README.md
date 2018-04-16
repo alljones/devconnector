@@ -1,5 +1,5 @@
 # DevConnector (MERN)
-Small social network with authentication, profiles,dashboards and posts.
+Small social network with authentication, profiles, dashboards and posts.
 
 
 
