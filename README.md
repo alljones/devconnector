@@ -1,7 +1,6 @@
 # DevConnector (MERN)
+
 Small social network with authentication, profiles, dashboards and posts.
-
-
 
 ### Technologies Used:
 
@@ -11,9 +10,3 @@ Small social network with authentication, profiles, dashboards and posts.
 - React/Redux
 - Twitter Bootstrap 4
 - Heroku & Git for Deployment
-
-
-
-------
-
-Copyright © 2018 Allan Jones
