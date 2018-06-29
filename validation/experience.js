@@ -9,22 +9,19 @@ module.exports = function validateExperienceInput(data) {
   data.from = !isEmpty(data.from) ? data.from : "";
 
   // Job Title Validation Check
-  if (!Validator.isEmail(data.title)) {
-    errors.title = "Job Title field is invalid";
+  if (!Validator.isEmpty(data.title)) {
+    errors.title = "Job Title field is required";
   }
 
-    // Company Validation Check
-    if (!Validator.isEmail(data.company)) {
-      errors.company = "Company field is invalid";
-    }
+  // Company Validation Check
+  if (!Validator.isEmpty(data.company)) {
+    errors.company = "Company field is required";
+  }
 
-    // From Validation Check
-    if (!Validator.isEmail(data.from)) {
-      errors.from = From date field is invalid";
-    }
-
-
-  
+  // From Validation Check
+  if (!Validator.isEmpty(data.from)) {
+    errors.from = "From date field is required";
+  }
 
   return {
     errors,
