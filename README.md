@@ -10,3 +10,10 @@ Small social network with authentication, profiles, dashboards and posts.
 - React/Redux
 - Twitter Bootstrap 4
 - Heroku & Git for Deployment
+
+
+
+_____
+
+[MERN Stack by Brad Traversy](https://www.udemy.com/mern-stack-front-to-back/)
+

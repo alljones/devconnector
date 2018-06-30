@@ -110,9 +110,9 @@ router.delete("/", passport.authenticate("jwt", { session: false }),
         });
 
     
-     // @router  POST api/posts/unlike/:id
-    // @desc    Unlike post
-    // @access  Private
+    // @router  POST api/posts/unlike/:id
+    // @desc     Unlike post
+    // @access   Private
     router.post("/unlike/:id", passport.authenticate("jwt", { session: false }),
     (req, res) => {
         Profile.findOne({ user: req.user.id}).then(profile => {
@@ -139,7 +139,13 @@ router.delete("/", passport.authenticate("jwt", { session: false }),
             
         });
 
+    // @router  POST api/posts/comment/:id
+    // @desc     Add comments to post
+    // @access   Private
 
+    router.post('/comment/:id', passport.authenticate("jwt", { session: false }),(req, res) => {
+
+    });
 
 
 module.exports = router;
