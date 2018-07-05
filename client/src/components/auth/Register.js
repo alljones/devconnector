@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { PropTypes}  from "prop-types";
 import { withRouter } from 'react-router-dom';
 import classnames from 'classnames';
 import { connect } from 'react-redux';
@@ -19,6 +19,12 @@ constructor(){
 
   this.OnChange = this.onChange.bind(this);
   this.OnSubmit = this.onSubmit.bind(this);
+}
+
+componentDidMount(){
+  if(this.props.auth.isAuthenticated){
+    this.props.history.push('dashboard');
+  }
 }
 
 componentWillReceiveProps(nextProps){

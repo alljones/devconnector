@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { PropTypes}  from "prop-types";
 import { connect } from 'react-redux';
 import classnames from 'classnames';
 import { loginUser } from '../../actions/authActions';
@@ -18,6 +18,11 @@ export default class Login extends Component {
     this.OnSubmit = this.onSubmit.bind(this);
   }
 
+  componentDidMount(){
+    if(this.props.auth.isAuthenticated){
+      this.props.history.push('dashboard');
+    }
+  }
   componentWillReceiveProps(nextProps){
     if(nextProps.auth.isAuthenticated){
       this.props.history.push('/dashboard');
@@ -89,6 +94,8 @@ Login.propTypes = {
   auth: PropTypes.object.isRequired,
   errors: PropTypes.object.isRequired
 };
+
+
 const mapStateToProps = (state) => ({
   auth: state.auth,
   errors: state.errors
