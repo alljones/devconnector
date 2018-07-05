@@ -19,6 +19,10 @@ export default class Login extends Component {
   }
 
   componentWillReceiveProps(nextProps){
+    if(nextProps.auth.isAuthenticated){
+      this.props.history.push('/dashboard');
+    }
+    
     if(nextProps.errors){
       this.setState({errors: nextProps.errors});
     }
@@ -30,11 +34,11 @@ export default class Login extends Component {
   
     onSubmit(e){
       e.preventDefault();
-      const  user ={
+      const  userData ={
         email: this.state.email,
         password: this.state.password,
       }
-      console.log(user)
+      this.props.loginUser(userData)
     }
   
   render() {
@@ -90,4 +94,4 @@ const mapStateToProps = (state) => ({
   errors: state.errors
 });
 
-export default connect(mapStateToProps, { loginUser})(withRouter(Login));
+export default connect(mapStateToProps, { loginUser})(Login);
